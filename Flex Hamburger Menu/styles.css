@@ -1,0 +1,80 @@
+*{margin: 0;
+padding: 0;
+text-decoration: none;
+list-style: none;
+}
+
+nav{
+  height: 80px;
+  background: #333;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: black;}
+
+label.logo{
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 80px;
+  color: #ffffff;
+}
+
+nav ul{display: flex; line-height: 80px;
+text-transform: uppercase;
+}
+nav li{margin: 0 6px;}
+ nav a{
+    font-size: 17px;
+    /* border: 1px solid white transparent; */
+    padding: 3px 8px;
+    border-radius: 3px;
+    color: #ffffff;
+}
+
+a.active, a:hover{
+  border:1px solid white;
+  transition: .8s;
+}
+
+nav #menu-icon{
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 35px;
+  line-height: 80px;
+  display: none;
+}
+
+/* media queries */
+@media(max-width:600px){
+ 
+  nav ul{
+    flex-direction: column;
+    line-height: 40px;
+    margin-top: 85px;
+    align-items: center;
+    /* added to implement the nav items */
+    width: 100%;
+    top: 80px;
+    left: -100%;
+    height: 100vh;
+    transition: all .8s;
+    position: fixed;
+}
+  nav #menu-icon{
+    color: #ffffff;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 40px;
+  }
+ nav li{display: block;}
+ a.active, a:hover{
+   border: none;
+ }
+nav li:hover{background: blueviolet;}
+ nav a{font-size: 20px;}
+ nav ul.show{left: 0;}
+}
